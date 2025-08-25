@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike Tech Shoes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600180758890-6d875d41eae7?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .tech-glow {
+      color: #0ff;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #ccc;
+    }
+
+    .cta-btn {
+      padding: 12px 30px;
+      background-color: #0ff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .products-section {
+      padding: 60px 30px;
+      background-color: #111;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0ff;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,255,255,0.2);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .product-card p {
+      color: #0ff;
+      font-weight: bold;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="logo">NIKE<span class="tech-glow">TECH</span></h1>
+      <p class="tagline">Future of Sneakers Starts Here</p>
+      <a href="#products" class="cta-btn">Explore Now</a>
+    </div>
+  </header>
+
+  <section id="products" class="products-section">
+    <h2 class="section-title">Top Nike Tech Shoes</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/5879c231-3d88-4bc2-8f47-7300cb91e6f5/air-max-plus-mens-shoes-NZfhL9.png" alt="Nike Air Max Plus">
+        <h3>Nike Air Max Plus</h3>
+        <p>$180</p>
+      </div>
+      <div class="product-card">
+        <img src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/90019d5c-651d-4703-b32e-9e6bcb3a6ec8/air-zoom-pegasus-41-road-running-shoes-5hW5mH.png" alt="Pegasus 41">
+        <h3>Pegasus 41</h3>
+        <p>$140</p>
+      </div>
+      <div class="product-card">
+        <img src="https://static.nike.com/a/images/t_prod/w_640,c_limit,f_auto/f0b845a7-d5e6-42c1-9346-3b6f8d8cb4a4/air-jordan-1-low-se-shoes-mJ5L6S.png" alt="Air Jordan 1 Low">
+        <h3>Air Jordan 1 Low SE</h3>
+        <p>$125</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Nike Advertising | Designed by You</p>
+  </footer>
+
+</body>
+</html>
