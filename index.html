@@ -21,7 +21,131 @@
       overflow: hidden;
     }
 
-    /* Create the RGB light effect in the background */
+    /* General Structure */
+    header {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600180758890-6d875d41eae7?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px #0ff;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .tech-glow {
+      color: #0ff;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .cta-btn {
+      padding: 12px 30px;
+      background-color: #0ff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+      letter-spacing: 1px;
+    }
+
+    .cta-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Product Section */
+    .products-section {
+      padding: 60px 30px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #0ff;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      position: relative;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .product-card p {
+      color: #0ff;
+      font-weight: bold;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    /* Animation for moving lights */
     .moving-light {
       position: absolute;
       top: 50%;
@@ -57,123 +181,13 @@
       }
     }
 
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1600180758890-6d875d41eae7?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .logo {
-      font-size: 4rem;
-      color: #ffffff;
-      text-shadow: 0 0 10px #0ff;
-    }
-
-    .tech-glow {
-      color: #0ff;
-    }
-
-    .tagline {
-      font-size: 1.5rem;
-      margin: 20px 0;
-      color: #ccc;
-    }
-
-    .cta-btn {
-      padding: 12px 30px;
-      background-color: #0ff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .cta-btn:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    .products-section {
-      padding: 60px 30px;
-      background-color: #111;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #0ff;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product-card {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 10px rgba(0,255,255,0.2);
-    }
-
-    .product-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .product-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .product-card p {
-      color: #0ff;
-      font-weight: bold;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      color: #777;
-    }
   </style>
 </head>
 <body>
 
   <div class="moving-light"></div> <!-- RGB light effect -->
 
-  <header class="hero">
+  <header>
     <div class="hero-content">
       <h1 class="logo">NIKE<span class="tech-glow">TECH</span></h1>
       <p class="tagline">Future of Sneakers Starts Here</p>
